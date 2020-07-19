@@ -7,7 +7,7 @@ Get real-time quotes form  http://hq.sinajs.cn
 
 Use tushare stock code format.
 
-eg: 000001.SZ,NOT sz000001!!!
+eg: 000001.SZ ,NOT sz000001 !!!
 
 ## usage
 ```
