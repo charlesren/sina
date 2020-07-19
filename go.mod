@@ -1,3 +1,3 @@
-module github.com/charlesren/sina
+module sina
 
 go 1.14
