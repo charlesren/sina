@@ -1,7 +1,6 @@
 package sina
 
 import (
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -15,7 +14,6 @@ const sinaURLPrefix = "http://hq.sinajs.cn/list="
 func GetData(stock string) Data {
 	stock = TushareToSina(stock)
 	URL := sinaURLPrefix + stock
-	fmt.Println(URL)
 	resp, err := http.Get(URL)
 	if err != nil {
 		log.Fatal(err)
