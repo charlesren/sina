@@ -12,7 +12,6 @@ const sinaURLPrefix = "http://hq.sinajs.cn/list="
 
 // GetData return real time stock data info
 func GetData(stock string) Data {
-	stock = TushareToSina(stock)
 	URL := sinaURLPrefix + stock
 	resp, err := http.Get(URL)
 	if err != nil {
@@ -62,6 +61,8 @@ func GetData(stock string) Data {
 }
 
 // TushareToSina convert Stock name from tushare format to Sina format
+// eg： stock := TushareToSina("000027.SZ")
+// you will get stock  sz000027
 func TushareToSina(stock string) string {
 	t := strings.Split(stock, ".")
 	stock = strings.ToLower(t[1]) + t[0]
